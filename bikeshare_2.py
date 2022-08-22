@@ -30,7 +30,14 @@ def get_filters():
 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-
+while True:
+        day=input('Type the preferred day or type all:')
+        day=day.lower()
+        if day not in ['sunday','monday','tuesday','wednesday','thursday','friday','saturday','sunday','all']:
+            print('That is not a day, type in a day of the week')
+        else:
+            print('Data for {} will be displayed now'.format(day))
+            break
 
     print('-'*40)
     return city, month, day
